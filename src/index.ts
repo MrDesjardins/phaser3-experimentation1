@@ -1,10 +1,10 @@
 import Phaser from "phaser";
 import { configuration } from "./config";
-import { Demo1 } from "./scenes/demo1";
-import { Demo2 } from "./scenes/demo2";
+import { GameScene } from "./scenes/menu";
 
-new Phaser.Game(
-  Object.assign(configuration, {
-    scene: [Demo1],
-  })
-);
+new Phaser.Game({
+  ...configuration,
+  ...{
+    scene: [GameScene],
+  },
+});
